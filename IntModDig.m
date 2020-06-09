@@ -227,11 +227,11 @@ switch get(handles.tipoMod,'Value')
     title('Señal de información')
     grid on;
     subplot(3,1,2)
-    plot(port, 'black')
+    plot(port)
     title('Señal portadora')
     grid on;
     subplot(3,1,3)
-    plot(d, 'r')
+    plot(d)
     grid on;
     title('Modulación digital en amplitud (ASK)') 
   case 2
@@ -264,11 +264,11 @@ switch get(handles.tipoMod,'Value')
     title('Señal de información')
     grid on;
     subplot(3,1,2)
-    plot(port, 'black')
+    plot(port)
     title('Señal portadora')
     grid on;
     subplot(3,1,3)
-    plot(d, 'r')
+    plot(d)
     grid on;
     title('Modulación digital en frecuencia (FSK)')
       
@@ -299,11 +299,11 @@ switch get(handles.tipoMod,'Value')
     title('Señal de información')
     grid on;
     subplot(3,1,2)
-    plot(port, 'black')
+    plot(port)
     title('Señal portadora')
     grid on;
     subplot(3,1,3)
-    plot(d, 'r')
+    plot(d)
     grid on;
     title('Modulación de desplazamiento de fase binaria (BPSK)')
  otherwise   
@@ -347,11 +347,11 @@ switch get(handles.tipoMod,'Value')
     title('Señal de información')
     grid on;
     subplot(3,1,2)
-    plot(port, 'black')
+    plot(port)
     title('Señal portadora')
     grid on;
     subplot(3,1,3)
-    plot(y, 'r', 'linewidth', 1);
+    plot(y,'linewidth', 1);
     title('Modulación por desplazamiento cuadrafásica (QPSK)');
     grid on;
 end 
@@ -622,7 +622,7 @@ Fs1 = Fc:(Fs-Fc)/(length(Bessel1)-1):Fs;
 fre = [Fm1(1:length(Fm1)-1) Fc Fs1(2:length(Fs1))];
 y = cat(2,Amp,Ampl(2:length(Amp)));
 figure(1)
-stem(fre,y,'r')
+stem(fre,y)
 grid on;
 xlabel('Frecuencia (Hz)');
 ylabel('Amplitud (V)');
